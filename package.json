@@ -1,7 +1,7 @@
 {
   "name": "react-loader",
   "description": "React component that displays a spinner via spin.js until your component is loaded",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "main": "lib/react-loader.js",
   "scripts": {
     "build": "./node_modules/.bin/jsx -x jsx lib lib",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/quickleft/react-loader"
+    "url": "https://github.com/darmody/react-loader"
   },
   "keywords": [
     "react",
@@ -29,10 +29,7 @@
     "url": "http://quickleft.com"
   },
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/quickleft/react-loader/issues"
-  },
-  "homepage": "https://github.com/quickleft/react-loader",
+  "homepage": "https://github.com/darmody/react-loader",
   "dependencies": {
     "react": "^0.14.0",
     "react-dom": "^0.14.0",

@@ -81,28 +81,17 @@
         }
       });
 
-      this.setState({ loaded: loaded, options: options }, this.spin);
-    },
-
-    spin: function () {
-      if (this.isMounted() && !this.state.loaded) {
-        var spinner = new Spinner(this.state.options);
-        var target =  ReactDOM.findDOMNode(this.refs.loader);
-
-        // clear out any other spinners from previous renders
-        target.innerHTML = '';
-        spinner.spin(target);
-      }
+      this.setState({ loaded: loaded, options: options });
     },
 
     render: function () {
       var props, children;
 
       if (this.state.loaded) {
-        props = { key: 'content', className: this.props.loadedClassName };
+        props = { key: 'content', className: this.props.loadedClassName, this.state.loaded };
         children = this.props.children;
       } else {
-        props = { key: 'loader', ref: 'loader', className: this.props.parentClassName };
+        props = { key: 'loader', ref: 'loader', className: this.props.parentClassName, this.state.loaded };
       }
 
       return React.createElement(this.props.component, props, children);
